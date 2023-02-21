@@ -7,9 +7,9 @@ class NombreNodo(Node):
     
     def __init__(self):
         super().__init__('NombreNodo')
-        self.publisher_ = self.create_publisher(Twist, 'turtlebot_cmdVel', 1)
-        #self.publisher_ = self.create_subscription(Twist, 'turtlebot_cmdVel', 1)
-        #Los argumentos del metodo indican el tipo de mensaque que se manda
+        self.publisher_ = self.create_publisher(tipoMensaje, 'nombre topico', 10) #para indicar que va a publicar dicho topico
+        self.publisher_ = self.create_subscription(tipoMensaje, 'nombre topico', 10) #para hacerlo subscribirse a dicho topico
+        
 
     def corregir():
         pass
