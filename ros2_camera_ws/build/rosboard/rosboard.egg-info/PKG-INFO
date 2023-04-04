@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: rosboard
+Version: 1.2.1
+Summary: ROS node that turns your robot into a web server to visualize ROS topics
+Home-page: UNKNOWN
+Maintainer: dheera
+Maintainer-email: dheera.r.e.m.o.v.e.t.h.i.s@dheera.net
+License: BSD
+Platform: UNKNOWN
+Provides-Extra: system_stats
+License-File: LICENSE
+
+UNKNOWN
+

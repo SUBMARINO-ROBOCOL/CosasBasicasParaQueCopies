@@ -1,0 +1,23 @@
+[1.558s] Invoking command in '/home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/src/cam_stream': PYTHONPATH=/home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/build/cam_stream/prefix_override:/home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/cam_stream build --build-base /home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/build/cam_stream/build install --record /home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/build/cam_stream/install.log --single-version-externally-managed
+[1.995s] running egg_info
+[1.996s] writing ../../build/cam_stream/cam_stream.egg-info/PKG-INFO
+[1.997s] writing dependency_links to ../../build/cam_stream/cam_stream.egg-info/dependency_links.txt
+[1.997s] writing entry points to ../../build/cam_stream/cam_stream.egg-info/entry_points.txt
+[1.998s] writing requirements to ../../build/cam_stream/cam_stream.egg-info/requires.txt
+[1.998s] writing top-level names to ../../build/cam_stream/cam_stream.egg-info/top_level.txt
+[2.001s] reading manifest file '../../build/cam_stream/cam_stream.egg-info/SOURCES.txt'
+[2.003s] writing manifest file '../../build/cam_stream/cam_stream.egg-info/SOURCES.txt'
+[2.003s] running build
+[2.003s] running build_py
+[2.004s] running install
+[2.004s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[2.004s]   warnings.warn(
+[2.005s] running install_lib
+[2.007s] running install_data
+[2.009s] running install_egg_info
+[2.012s] removing '/home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages/cam_stream-0.0.0-py3.10.egg-info' (and everything under it)
+[2.012s] Copying ../../build/cam_stream/cam_stream.egg-info to /home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages/cam_stream-0.0.0-py3.10.egg-info
+[2.014s] running install_scripts
+[2.055s] Installing driver_node script to /home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/install/cam_stream/lib/cam_stream
+[2.055s] writing list of installed files to '/home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/build/cam_stream/install.log'
+[2.163s] Invoked command in '/home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/src/cam_stream' returned '0': PYTHONPATH=/home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/build/cam_stream/prefix_override:/home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/cam_stream build --build-base /home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/build/cam_stream/build install --record /home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/build/cam_stream/install.log --single-version-externally-managed
