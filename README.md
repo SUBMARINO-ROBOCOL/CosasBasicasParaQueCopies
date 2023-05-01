@@ -1,5 +1,4 @@
-# Descargar Github Desktop
-
-sudo wget https://github.com/shiftkey/desktop/releases/download/release-3.1.1-linux1/GitHubDesktop-linux-3.1.1-linux1.deb
-sudo apt-get install gdebi-core 
-sudo gdebi GitHubDesktop-linux-3.1.1-linux1.deb
+https://blog.misterblue.com/2021/2021-05-29-ros2-sending-image
+ros2 run rqt_image_view rqt_image_view
+https://docs.ros.org/en/foxy/Concepts/About-RQt.html
+sudo apt install ros-foxy-rqt*
