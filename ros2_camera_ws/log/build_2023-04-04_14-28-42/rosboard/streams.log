@@ -1,0 +1,24 @@
+[1.126s] Invoking command in '/home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/src/rosboard': PYTHONPATH=/home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/build/rosboard/prefix_override:/home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/install/rosboard/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/rosboard build --build-base /home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/build/rosboard/build install --record /home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/build/rosboard/install.log --single-version-externally-managed
+[1.429s] running egg_info
+[1.430s] writing ../../build/rosboard/rosboard.egg-info/PKG-INFO
+[1.430s] writing dependency_links to ../../build/rosboard/rosboard.egg-info/dependency_links.txt
+[1.431s] writing entry points to ../../build/rosboard/rosboard.egg-info/entry_points.txt
+[1.431s] writing requirements to ../../build/rosboard/rosboard.egg-info/requires.txt
+[1.431s] writing top-level names to ../../build/rosboard/rosboard.egg-info/top_level.txt
+[1.438s] reading manifest file '../../build/rosboard/rosboard.egg-info/SOURCES.txt'
+[1.438s] adding license file 'LICENSE'
+[1.441s] writing manifest file '../../build/rosboard/rosboard.egg-info/SOURCES.txt'
+[1.441s] running build
+[1.441s] running build_py
+[1.452s] running install
+[1.452s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.452s]   warnings.warn(
+[1.452s] running install_lib
+[1.459s] running install_data
+[1.459s] running install_egg_info
+[1.462s] removing '/home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/install/rosboard/lib/python3.10/site-packages/rosboard-1.2.1-py3.10.egg-info' (and everything under it)
+[1.463s] Copying ../../build/rosboard/rosboard.egg-info to /home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/install/rosboard/lib/python3.10/site-packages/rosboard-1.2.1-py3.10.egg-info
+[1.464s] running install_scripts
+[1.488s] Installing rosboard_node script to /home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/install/rosboard/lib/rosboard
+[1.489s] writing list of installed files to '/home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/build/rosboard/install.log'
+[1.538s] Invoked command in '/home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/src/rosboard' returned '0': PYTHONPATH=/home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/build/rosboard/prefix_override:/home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/install/rosboard/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/rosboard build --build-base /home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/build/rosboard/build install --record /home/sarten-imusa-420/Documents/ROS/ros2_camera_ws/build/rosboard/install.log --single-version-externally-managed

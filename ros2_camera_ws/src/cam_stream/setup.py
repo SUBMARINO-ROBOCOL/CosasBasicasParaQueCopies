@@ -20,8 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'driver_node = cam_stream.driver_node:main',
-            "depth_node = cam_stream.depth_node:main"
+            'driver_node = cam_stream.driver_node:main'
         ],
     },
 )
