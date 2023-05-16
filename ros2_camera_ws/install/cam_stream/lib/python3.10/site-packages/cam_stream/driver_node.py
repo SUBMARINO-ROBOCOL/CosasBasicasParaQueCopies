@@ -1,7 +1,7 @@
 import rclpy
 from rclpy.node import Node
 
-from sensor_msgs.msg import Image
+from sensor_msgs.msg import CompressedImage
 
 from cv_bridge import CvBridge
 
@@ -14,9 +14,8 @@ class DriverNode(Node):
 
         self.bridge = CvBridge()
         self.camera = cv2.VideoCapture(camIndex)
-        self.num_frame=0
 
-        self.publisher = self.create_publisher(Image, 'camera_'+str(camIndex), 10)
+        self.publisher = self.create_publisher(CompressedImage, 'camera_'+str(camIndex), 10)
 
         timer_period = 0.05  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
@@ -24,9 +23,7 @@ class DriverNode(Node):
     def timer_callback(self):
         check, frame = self.camera.read()
         if check:
-            msg = self.bridge.cv2_to_imgmsg(frame, 'bgr8')
-            msg.header.frame_id = str(self.num_frame) 
-            self.num_frame +=1
+            msg = self.bridge.cv2_to_compressed_imgmsg(frame,'jpg')
             self.publisher.publish(msg)
 
 
