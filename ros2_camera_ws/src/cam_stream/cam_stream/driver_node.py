@@ -23,6 +23,7 @@ class DriverNode(Node):
     def timer_callback(self):
         check, frame = self.camera.read()
         if check:
+            frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
             msg = self.bridge.cv2_to_imgmsg(frame,'mono8')
             self.publisher.publish(msg)
 
