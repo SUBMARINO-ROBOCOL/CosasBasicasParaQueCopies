@@ -89,10 +89,11 @@ def main():
     rclpy.init()
 
     if(printCamIndexes(getCamIndexes())):
-        
+        wantColor = False
         camIndex = setCamIndx()
         realSense = isRealSense()
-        wantColor = isColor()
+        if not realSense:
+            wantColor = isColor()
         node = DriverNode(camIndex, realSense, wantColor)
         
         rclpy.spin(node)
