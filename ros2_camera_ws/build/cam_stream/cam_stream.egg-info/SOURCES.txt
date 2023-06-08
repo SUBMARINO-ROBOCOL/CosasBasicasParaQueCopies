@@ -10,7 +10,6 @@ setup.py
 ../../build/cam_stream/cam_stream.egg-info/zip-safe
 cam_stream/__init__.py
 cam_stream/driver_node.py
-cam_stream/test_class.py
 resource/cam_stream
 test/test_copyright.py
 test/test_flake8.py
