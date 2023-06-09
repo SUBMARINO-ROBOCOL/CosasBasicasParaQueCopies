@@ -23,7 +23,6 @@ class ImageCtrlNode(Node):
     
     def cvProcessing(self,msg):
         img = self.bridge.imgmsg_to_cv2(msg)
-        print("sent")
         show_img.showImg(img)
 
 
