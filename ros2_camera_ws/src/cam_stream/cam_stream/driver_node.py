@@ -83,7 +83,7 @@ def isColor():
      return input("want color? (Y/N): ").upper()=="Y"
 
 def isRealSense():
-     return input("want color? (Y/N): ").upper()=="Y"
+     return input("is RealSense? (Y/N): ").upper()=="Y"
 
 def setQoSProfile() -> QoSProfile:
     qosProfileVar = QoSProfile(depth=2)
