@@ -23,8 +23,10 @@ class DriverNode(Node):
         timer_period = 0.1  # seconds
 
         callbackFunction = None
-        if self.realSense:
+        if self.realSense and not self.wantColor:
             callbackFunction = self.realSenseConfig
+        elif self.realSense and self.wantColor:
+            callbackFunction = self.realSenseConfig2
         elif self.wantColor:
             callbackFunction = self.colorConfig
         else:
@@ -37,6 +39,13 @@ class DriverNode(Node):
         if check:
             msg = self.bridge.cv2_to_imgmsg(frame,'mono8')
             self.publisher.publish(msg)
+
+    def realSenseConfig2(self):
+        check, frame = self.camera.read()
+        if check:
+            msg = self.bridge.cv2_to_imgmsg(frame,'rgb8')
+            self.publisher.publish(msg)
+
 
     def colorConfig(self):
         check, frame = self.camera.read()
@@ -101,8 +110,8 @@ def main():
         wantColor = False
         camIndex = setCamIndx()
         realSense = isRealSense()
-        if not realSense:
-            wantColor = isColor()
+        wantColor = isColor()
+        
         node = DriverNode(camIndex, realSense, wantColor, setQoSProfile())
         
         rclpy.spin(node)

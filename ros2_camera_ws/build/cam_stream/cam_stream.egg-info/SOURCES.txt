@@ -11,7 +11,7 @@ setup.py
 cam_stream/__init__.py
 cam_stream/driver_node.py
 cam_stream/image_ctrl.py
-cam_stream/show_img.py
+cam_stream/lib/show_img.py
 resource/cam_stream
 test/test_copyright.py
 test/test_flake8.py

@@ -23,15 +23,17 @@ class ImageCtrlNode(Node):
     
     def cvProcessing(self,msg):
         img = self.bridge.imgmsg_to_cv2(msg)
+        print("sent")
         show_img.showImg(img)
 
 
 
 
 def getCamSubscription():
-    return int(input("Choose a camera to subscribe: "))
+    return int(input("\nChoose a camera to subscribe: "))
 
 def setQoSProfile() -> QoSProfile:
+    
     qosProfileVar = QoSProfile(depth=2)
     qosProfileVar.durability = QoSDurabilityPolicy.VOLATILE
     qosProfileVar.reliability = QoSReliabilityPolicy.BEST_EFFORT
@@ -54,5 +56,4 @@ def main():
 
 
 if __name__ == '__main__':
-    show_img.hola()
     main()
