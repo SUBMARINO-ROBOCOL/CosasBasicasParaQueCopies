@@ -2,12 +2,13 @@ import rclpy
 from rclpy.node import Node
 from rclpy.qos import QoSReliabilityPolicy, QoSHistoryPolicy, QoSDurabilityPolicy, QoSProfile
 
-
 from sensor_msgs.msg import Image
 
 from cv_bridge import CvBridge
 
 import cv2
+
+import show_img
 
 
 class ImageCtrlNode(Node):
@@ -22,8 +23,7 @@ class ImageCtrlNode(Node):
     
     def cvProcessing(self,msg):
         img = self.bridge.imgmsg_to_cv2(msg)
-        cv2.imshow("texto",img)
-        cv2.waitKey(1)
+        show_img.showImg(img)
 
 
 
@@ -54,4 +54,5 @@ def main():
 
 
 if __name__ == '__main__':
+    show_img.hola()
     main()

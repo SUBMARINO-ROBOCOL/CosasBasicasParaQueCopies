@@ -10,18 +10,20 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        ('lib/' + package_name, [package_name+'/show_img.py'])
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='sarten-imusa-420',
-    maintainer_email='s.oliverosb@uniandes.edu.co',
+    maintainer='Pu$$yBoy',
+    maintainer_email='lol',
     description='TODO: Package description',
     license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
             'driver_node = cam_stream.driver_node:main',
-            'image_ctrl = cam_stream.image_ctrl:main'
+            'image_ctrl = cam_stream.image_ctrl:main',
+            'show_img = cam_stream.show_img:main' 
         ],
     },
 )

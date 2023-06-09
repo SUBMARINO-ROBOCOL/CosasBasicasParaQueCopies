@@ -1,11 +1,14 @@
+/home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages/cam_stream/show_img.py
 /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages/cam_stream/driver_node.py
 /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages/cam_stream/image_ctrl.py
 /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages/cam_stream/__init__.py
+/home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages/cam_stream/__pycache__/show_img.cpython-310.pyc
 /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages/cam_stream/__pycache__/driver_node.cpython-310.pyc
 /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages/cam_stream/__pycache__/image_ctrl.cpython-310.pyc
 /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages/cam_stream/__pycache__/__init__.cpython-310.pyc
 /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/share/ament_index/resource_index/packages/cam_stream
 /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/share/cam_stream/package.xml
+/home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/cam_stream/show_img.py
 /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages/cam_stream-0.0.0-py3.10.egg-info/entry_points.txt
 /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages/cam_stream-0.0.0-py3.10.egg-info/requires.txt
 /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages/cam_stream-0.0.0-py3.10.egg-info/SOURCES.txt
@@ -15,3 +18,4 @@
 /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages/cam_stream-0.0.0-py3.10.egg-info/dependency_links.txt
 /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/cam_stream/driver_node
 /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/cam_stream/image_ctrl
+/home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/cam_stream/show_img
