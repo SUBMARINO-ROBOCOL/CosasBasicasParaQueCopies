@@ -1,5 +1,6 @@
 import rclpy
 from rclpy.node import Node
+from rclpy.qos import QoSReliabilityPolicy, QoSHistoryPolicy, QoSDurabilityPolicy, QoSProfile
 
 from sensor_msgs.msg import Image
 
@@ -9,7 +10,7 @@ import cv2
 
 class DriverNode(Node):
 
-    def __init__(self, camIndex, realSense, wantColor):
+    def __init__(self, camIndex, realSense, wantColor, QoSProf):
         super().__init__('driver_node_'+str(camIndex))
 
         self.camIndex = camIndex
@@ -17,9 +18,9 @@ class DriverNode(Node):
         self.wantColor = wantColor
         self.bridge = CvBridge()
         self.camera = cv2.VideoCapture(camIndex)
-        self.publisher = self.create_publisher(Image, 'camera_'+str(camIndex), 0)
+        self.publisher = self.create_publisher(Image, 'camera_'+str(camIndex), qos_profile=QoSProf)
 
-        timer_period = 0.05  # seconds
+        timer_period = 0.1  # seconds
 
         callbackFunction = None
         if self.realSense:
@@ -83,6 +84,14 @@ def isRealSense():
 
 def isColor():
      return input("want color? (Y/N): ").upper()=="Y"
+
+def setQoSProfile() -> QoSProfile:
+    qosProfileVar = QoSProfile(depth=2)
+    qosProfileVar.durability = QoSDurabilityPolicy.VOLATILE
+    qosProfileVar.reliability = QoSReliabilityPolicy.BEST_EFFORT
+    qosProfileVar.history = QoSHistoryPolicy.KEEP_LAST
+    
+    return qosProfileVar 
     
 
 def main():
@@ -94,7 +103,7 @@ def main():
         realSense = isRealSense()
         if not realSense:
             wantColor = isColor()
-        node = DriverNode(camIndex, realSense, wantColor)
+        node = DriverNode(camIndex, realSense, wantColor, setQoSProfile())
         
         rclpy.spin(node)
         node.destroy_node()

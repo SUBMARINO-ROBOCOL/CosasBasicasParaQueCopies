@@ -1,3 +1,4 @@
 [console_scripts]
 driver_node = cam_stream.driver_node:main
+image_ctrl = cam_stream.image_ctrl:main
 
