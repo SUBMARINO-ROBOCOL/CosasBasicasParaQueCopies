@@ -32,6 +32,7 @@ def getCamSubscription():
     return int(input("Choose a camera to subscribe: "))
 
 def setQoSProfile() -> QoSProfile:
+    
     qosProfileVar = QoSProfile(depth=2)
     qosProfileVar.durability = QoSDurabilityPolicy.VOLATILE
     qosProfileVar.reliability = QoSReliabilityPolicy.BEST_EFFORT
