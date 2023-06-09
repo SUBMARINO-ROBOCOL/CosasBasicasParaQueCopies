@@ -10,23 +10,20 @@ import cv2
 
 class DriverNode(Node):
 
-    def __init__(self, camIndex, realSense, wantColor, QoSProf):
+    def __init__(self, camIndex, isRealSense, wantColor, QoSProf):
         super().__init__('driver_node_'+str(camIndex))
 
         self.camIndex = camIndex
-        self.realSense = realSense
         self.wantColor = wantColor
+        self.isRealSense = isRealSense
         self.bridge = CvBridge()
         self.camera = cv2.VideoCapture(camIndex)
         self.publisher = self.create_publisher(Image, 'camera_'+str(camIndex), qos_profile=QoSProf)
 
-        timer_period = 0.1  # seconds
+        timer_period = 0.05  # seconds
 
-        callbackFunction = None
-        if self.realSense and not self.wantColor:
+        if self.isRealSense:
             callbackFunction = self.realSenseConfig
-        elif self.realSense and self.wantColor:
-            callbackFunction = self.realSenseConfig2
         elif self.wantColor:
             callbackFunction = self.colorConfig
         else:
@@ -38,12 +35,6 @@ class DriverNode(Node):
         check, frame = self.camera.read()
         if check:
             msg = self.bridge.cv2_to_imgmsg(frame,'mono8')
-            self.publisher.publish(msg)
-
-    def realSenseConfig2(self):
-        check, frame = self.camera.read()
-        if check:
-            msg = self.bridge.cv2_to_imgmsg(frame,'rgb8')
             self.publisher.publish(msg)
 
 
@@ -88,11 +79,11 @@ def printCamIndexes(arr):
 def setCamIndx():
     return int(input("Select a camIndex: "))
 
-def isRealSense():
-    return input("is realsense? (Y/N): ").upper()=="Y"
-
 def isColor():
      return input("want color? (Y/N): ").upper()=="Y"
+
+def isRealSense():
+     return input("is RealSense? (Y/N): ").upper()=="Y"
 
 def setQoSProfile() -> QoSProfile:
     qosProfileVar = QoSProfile(depth=2)
@@ -109,10 +100,11 @@ def main():
     if(printCamIndexes(getCamIndexes())):
         wantColor = False
         camIndex = setCamIndx()
-        realSense = isRealSense()
-        wantColor = isColor()
+        isRealsense = isRealSense()
+        if not isRealsense:
+            wantColor = isColor()
         
-        node = DriverNode(camIndex, realSense, wantColor, setQoSProfile())
+        node = DriverNode(camIndex,isRealsense, wantColor, setQoSProfile())
         
         rclpy.spin(node)
         node.destroy_node()

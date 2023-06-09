@@ -9,6 +9,7 @@ from cv_bridge import CvBridge
 import cv2
 
 import show_img
+import cam_boton
 
 
 class ImageCtrlNode(Node):
@@ -16,14 +17,38 @@ class ImageCtrlNode(Node):
     def __init__(self, camIndx, QoSProf):
         super().__init__("imageCtrl_"+str(camIndx))
         
+        self.algos = [self.showImgAlgo, self.redSquareAlgo]
+        
         self.camIndx = camIndx
         self.bridge = CvBridge()
 
-        self.sub = self.create_subscription(Image, "camera_"+str(self.camIndx), self.cvProcessing,qos_profile=QoSProf) 
+
+        excutionFunction = self.algoMenuSelector()
+
+        self.sub = self.create_subscription(Image, "camera_"+str(self.camIndx), excutionFunction, qos_profile=QoSProf) 
     
-    def cvProcessing(self,msg):
+    def algoMenuSelector(self):
+        
+        menu="Choose one of the following alrogithms:"
+        for i in range(len(self.algos)):
+            menu+="\n" + str(i+1) +". " +str(self.algos[i].__name__)
+
+        print(menu)
+
+        algoIndx = int(input())-1
+
+        return self.algos[algoIndx]
+
+        
+
+    def showImgAlgo(self,msg):
         img = self.bridge.imgmsg_to_cv2(msg)
         show_img.showImg(img)
+
+    def redSquareAlgo(self, msg):
+        img = self.bridge.imgmsg_to_cv2(msg)
+        cam_boton.red_box(img)
+
 
 
 

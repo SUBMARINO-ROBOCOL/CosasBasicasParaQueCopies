@@ -101,7 +101,7 @@ def main():
         wantColor = False
         camIndex = setCamIndx()
         isRealsense = isRealSense()
-        if not isRealSense:
+        if not isRealsense:
             wantColor = isColor()
         
         node = DriverNode(camIndex,isRealsense, wantColor, setQoSProfile())

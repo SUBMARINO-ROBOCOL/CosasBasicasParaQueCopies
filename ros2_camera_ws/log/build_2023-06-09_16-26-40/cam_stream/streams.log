@@ -1,0 +1,34 @@
+[0.844s] Invoking command in '/home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/src/cam_stream': PYTHONPATH=/home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/build/cam_stream/prefix_override:/home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/cam_stream build --build-base /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/build/cam_stream/build install --record /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/build/cam_stream/install.log --single-version-externally-managed
+[1.169s] running egg_info
+[1.170s] writing ../../build/cam_stream/cam_stream.egg-info/PKG-INFO
+[1.171s] writing dependency_links to ../../build/cam_stream/cam_stream.egg-info/dependency_links.txt
+[1.171s] writing entry points to ../../build/cam_stream/cam_stream.egg-info/entry_points.txt
+[1.171s] writing requirements to ../../build/cam_stream/cam_stream.egg-info/requires.txt
+[1.171s] writing top-level names to ../../build/cam_stream/cam_stream.egg-info/top_level.txt
+[1.173s] reading manifest file '../../build/cam_stream/cam_stream.egg-info/SOURCES.txt'
+[1.174s] writing manifest file '../../build/cam_stream/cam_stream.egg-info/SOURCES.txt'
+[1.175s] running build
+[1.175s] running build_py
+[1.175s] copying cam_stream/driver_node.py -> /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/build/cam_stream/build/lib/cam_stream
+[1.175s] copying cam_stream/image_ctrl.py -> /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/build/cam_stream/build/lib/cam_stream
+[1.176s] copying cam_stream/hola.py -> /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/build/cam_stream/build/lib/cam_stream
+[1.176s] running install
+[1.176s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.176s]   warnings.warn(
+[1.176s] running install_lib
+[1.177s] copying /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/build/cam_stream/build/lib/cam_stream/driver_node.py -> /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages/cam_stream
+[1.177s] copying /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/build/cam_stream/build/lib/cam_stream/image_ctrl.py -> /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages/cam_stream
+[1.177s] copying /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/build/cam_stream/build/lib/cam_stream/hola.py -> /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages/cam_stream
+[1.178s] byte-compiling /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages/cam_stream/driver_node.py to driver_node.cpython-310.pyc
+[1.179s] byte-compiling /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages/cam_stream/image_ctrl.py to image_ctrl.cpython-310.pyc
+[1.180s] byte-compiling /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages/cam_stream/hola.py to hola.cpython-310.pyc
+[1.180s] running install_data
+[1.181s] running install_egg_info
+[1.183s] removing '/home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages/cam_stream-0.0.0-py3.10.egg-info' (and everything under it)
+[1.183s] Copying ../../build/cam_stream/cam_stream.egg-info to /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages/cam_stream-0.0.0-py3.10.egg-info
+[1.184s] running install_scripts
+[1.212s] Installing driver_node script to /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/cam_stream
+[1.212s] Installing image_ctrl script to /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/cam_stream
+[1.212s] Installing show_img script to /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/cam_stream
+[1.212s] writing list of installed files to '/home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/build/cam_stream/install.log'
+[1.253s] Invoked command in '/home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/src/cam_stream' returned '0': PYTHONPATH=/home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/build/cam_stream/prefix_override:/home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/cam_stream build --build-base /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/build/cam_stream/build install --record /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/build/cam_stream/install.log --single-version-externally-managed

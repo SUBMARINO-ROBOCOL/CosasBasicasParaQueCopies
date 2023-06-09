@@ -10,7 +10,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('lib/' + package_name, [package_name+'/lib/show_img.py'])
+        ('lib/' + package_name, [package_name+'/lib/show_img.py',package_name+'/lib/cam_boton.py' ])
     ],
     install_requires=['setuptools'],
     zip_safe=True,
