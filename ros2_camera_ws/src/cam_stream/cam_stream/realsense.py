@@ -4,3 +4,4 @@ import cv2
 
 pipe = rs.pipeline()
 cfg  = rs.config()
+print("end")
