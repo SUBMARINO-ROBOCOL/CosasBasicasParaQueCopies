@@ -10,7 +10,7 @@ import cv2
 
 class DriverNode(Node):
 
-    def __init__(self, camIndex, realSense, wantColor, QoSProf):
+    def __init__(self, camIndex, wantColor, QoSProf):
         super().__init__('driver_node_'+str(camIndex))
 
         self.camIndex = camIndex
