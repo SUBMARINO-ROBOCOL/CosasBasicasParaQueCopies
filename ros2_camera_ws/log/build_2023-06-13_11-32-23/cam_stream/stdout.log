@@ -1,0 +1,18 @@
+running develop
+running egg_info
+writing cam_stream.egg-info/PKG-INFO
+writing dependency_links to cam_stream.egg-info/dependency_links.txt
+writing entry points to cam_stream.egg-info/entry_points.txt
+writing requirements to cam_stream.egg-info/requires.txt
+writing top-level names to cam_stream.egg-info/top_level.txt
+reading manifest file 'cam_stream.egg-info/SOURCES.txt'
+writing manifest file 'cam_stream.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/python3.10/site-packages/cam-stream.egg-link (link to .)
+Installing driver_node script to /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/cam_stream
+Installing image_ctrl script to /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/cam_stream
+Installing show_img script to /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/cam_stream
+
+Installed /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/build/cam_stream
+running install_data
+copying cam_stream/lib/cam_boton.py -> /home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/install/cam_stream/lib/cam_stream

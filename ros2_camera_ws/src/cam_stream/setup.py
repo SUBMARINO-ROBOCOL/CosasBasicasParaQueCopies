@@ -23,7 +23,7 @@ setup(
         'console_scripts': [
             'driver_node = cam_stream.driver_node:main',
             'image_ctrl = cam_stream.image_ctrl:main',
-            'show_img = cam_stream.show_img:main' 
+            'realsense_node = cam_stream.realsense_node:main'
         ],
     },
 )
