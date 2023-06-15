@@ -30,7 +30,7 @@ class RealsenseNode(Node):
         frames = self.pipe.wait_for_frames()
         color_frame = frames.get_color_frame()
         color_image = np.asanyarray(color_frame.get_data())
-        msg = self.bridge.cv2_to_imgmsg(color_image,"bgr8")
+        self.msg = self.bridge.cv2_to_imgmsg(color_image,"bgr8")
         self.pub.publish(self.msg)
 
 
