@@ -8,7 +8,7 @@ from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 
 
-import pyrealsense2 as rs
+import pyrealsense2.pyrealsense2 as rs
 import numpy as np
 
 class RealsenseNode(Node):
@@ -28,7 +28,7 @@ class RealsenseNode(Node):
 
     def realsense_config(self):
         frames = self.pipe.wait_for_frames()
-        color_frame = frames.get_color_frames()
+        color_frame = frames.get_color_frame()
         color_image = np.asanyarray(color_frame.get_data())
         msg = self.bridge.cv2_to_imgmsg(color_image,"bgr8")
         self.pub.publish(self.msg)
