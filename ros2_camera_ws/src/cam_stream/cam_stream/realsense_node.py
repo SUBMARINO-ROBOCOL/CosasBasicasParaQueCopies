@@ -20,7 +20,7 @@ class RealsenseNode(Node):
 
         self.pipe = rs.pipeline()
         self.config = rs.config()
-        self.config.enable_stream(rs.stream.color, 400,400,rs.format.bgr8,30)
+        self.config.enable_stream(rs.stream.color, 424,240,rs.format.bgr8,30)
         self.pipe.start(self.config)
 
         self.timer = 0.05
