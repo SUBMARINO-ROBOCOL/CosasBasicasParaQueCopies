@@ -10,6 +10,7 @@ import cv2
 
 import show_img
 import cam_boton
+import Codigo_ranas
 
 
 class ImageCtrlNode(Node):
@@ -17,7 +18,7 @@ class ImageCtrlNode(Node):
     def __init__(self, camIndx, QoSProf):
         super().__init__("imageCtrl_"+str(camIndx))
         
-        self.algos = [self.showImgAlgo, self.redSquareAlgo]
+        self.algos = [self.showImgAlgo, self.redSquareAlgo, self.conteoRanasAlgo]
         
         self.camIndx = camIndx
         self.bridge = CvBridge()
@@ -48,6 +49,10 @@ class ImageCtrlNode(Node):
     def redSquareAlgo(self, msg):
         img = self.bridge.imgmsg_to_cv2(msg)
         cam_boton.red_box(img)
+
+    def conteoRanasAlgo(self, msg):
+        img = self.bridge.imgmsg_to_cv2(msg)
+        Codigo_ranas.main(img)       
 
 
 
