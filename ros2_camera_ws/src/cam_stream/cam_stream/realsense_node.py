@@ -20,18 +20,19 @@ class RealsenseNode(Node):
 
         self.pipe = rs.pipeline()
         self.config = rs.config()
-        self.config.enable_stream(rs.stream.color, 424,240,rs.format.bgr8,30)
+        self.config.enable_stream(rs.stream.color, 640, 480,rs.format.bgr8,30)
         self.pipe.start(self.config)
+        print("success")
 
         self.timer = 0.05
-        self.create_timer(self.timer, self.realsense_config)
+        self.create_timer(self.timer, self.realsense_config1)
 
-    def realsense_config(self):
+    def realsense_config1(self):
         frames = self.pipe.wait_for_frames()
         color_frame = frames.get_color_frame()
         color_image = np.asanyarray(color_frame.get_data())
         self.msg = self.bridge.cv2_to_imgmsg(color_image,"bgr8")
-        self.pub.publish(self.msg)
+        self.pub.publish(self.msg)        
 
 
 def setQoSProfile() -> QoSProfile:
@@ -46,10 +47,6 @@ def setQoSProfile() -> QoSProfile:
 def main():
     rclpy.init()
 
-
-    wantColor = False
-    #wantColor = isColor()
-    
     node = RealsenseNode(setQoSProfile())
     
     rclpy.spin(node)

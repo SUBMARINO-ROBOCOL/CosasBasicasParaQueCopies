@@ -12,6 +12,7 @@ cam_stream/__init__.py
 cam_stream/driver_node.py
 cam_stream/image_ctrl.py
 cam_stream/realsense_node.py
+cam_stream/lib/Codigo_ranas.py
 cam_stream/lib/cam_boton.py
 cam_stream/lib/show_img.py
 resource/cam_stream

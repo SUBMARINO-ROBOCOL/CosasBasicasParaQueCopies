@@ -32,12 +32,14 @@ class DriverNode(Node):
     def colorConfig(self):
         check, frame = self.camera.read()
         if check:
+            frame = cv2.resize(frame, (640,480))
             msg = self.bridge.cv2_to_imgmsg(frame,'bgr8')
             self.publisher.publish(msg)
 
     def blackNWhiteConfig(self):
         check, frame = self.camera.read()
         if check:
+            frame = cv2.resize(frame, (640,480))
             frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
             msg = self.bridge.cv2_to_imgmsg(frame,'mono8')
             self.publisher.publish(msg)
@@ -46,7 +48,7 @@ class DriverNode(Node):
 def getCamIndexes():
         index = 0
         arr = []
-        while index < 6:
+        while index < 10:
             cap = cv2.VideoCapture(index)
             if cap.read()[0]:
                 arr.append(index)
