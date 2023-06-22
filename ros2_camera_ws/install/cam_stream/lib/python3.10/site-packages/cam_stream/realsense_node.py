@@ -7,6 +7,8 @@ from sensor_msgs.msg import Image
 
 from cv_bridge import CvBridge
 
+import cv2
+
 
 import pyrealsense2.pyrealsense2 as rs
 import numpy as np
@@ -20,7 +22,7 @@ class RealsenseNode(Node):
 
         self.pipe = rs.pipeline()
         self.config = rs.config()
-        self.config.enable_stream(rs.stream.color, 640, 480,rs.format.bgr8,30)
+        self.config.enable_stream(rs.stream.color, 640, 480, rs.format.bgr8, 30)
         self.pipe.start(self.config)
         print("success")
 
@@ -43,7 +45,6 @@ def setQoSProfile() -> QoSProfile:
     
     return qosProfileVar 
     
-
 def main():
     rclpy.init()
 

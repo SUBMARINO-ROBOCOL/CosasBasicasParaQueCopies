@@ -89,8 +89,12 @@ def main(img):
     contador = 0
     largest_contour = None
     trackers = []
-  
-    processed_frame, contador, largest_contour, trackers   = conteo_ranas(img, contador, largest_contour, trackers)
-    cv2.putText(processed_frame, "Frogs: " + str(contador), (10, 70), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 3, cv2.LINE_AA)
-    cv2.imshow("Frog Counting",processed_frame)
-    cv2.waitKey(1)
+    
+    resp = conteo_ranas(img, contador, largest_contour, trackers)
+ 
+    if resp != None:
+        
+        processed_frame, contador, largest_contour, trackers = resp
+        cv2.putText(processed_frame, "Frogs: " + str(contador), (10, 70), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 3, cv2.LINE_AA)
+        cv2.imshow("Frog Counting",processed_frame)
+        cv2.waitKey(1)
