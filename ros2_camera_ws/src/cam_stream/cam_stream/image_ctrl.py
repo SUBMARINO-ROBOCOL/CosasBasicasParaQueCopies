@@ -11,6 +11,7 @@ import cv2
 import show_img
 import cam_boton
 import Codigo_ranas
+import imgCrop
 
 
 class ImageCtrlNode(Node):
@@ -22,8 +23,10 @@ class ImageCtrlNode(Node):
         
         super().__init__("imageCtrl_"+name)
         
-        self.algos = [self.showImgAlgo, self.redSquareAlgo, self.conteoRanasAlgo]
+        self.algos = [self.showImgAlgo, self.redSquareAlgo, self.conteoRanasAlgo, self.cropFrame]
         
+        self.cropSize = None
+
         topic_subscription_name = None
 
         if camIndx<0:
@@ -63,9 +66,16 @@ class ImageCtrlNode(Node):
         cam_boton.red_box(img)
 
     def conteoRanasAlgo(self, msg):
+        
         img = self.bridge.imgmsg_to_cv2(msg)
-        Codigo_ranas.main(img)       
+        Codigo_ranas.main(img)      
 
+    def cropFrame(self, msg):
+        if self.cropSize == None:
+            self.cropSize = int(input("Select a cropSize: "))
+
+        frame = self.bridge.imgmsg_to_cv2(msg) 
+        imgCrop.crop(frame,self.cropSize)
 
 
 

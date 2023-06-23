@@ -12,7 +12,8 @@ setup(
         ('share/' + package_name, ['package.xml']),
         ('lib/' + package_name, [package_name+'/lib/show_img.py',
                                  package_name+'/lib/cam_boton.py',
-                                 package_name+'/lib/Codigo_ranas.py' ])
+                                 package_name+'/lib/Codigo_ranas.py',
+                                 package_name+'/lib/imgCrop.py'])
     ],
     install_requires=['setuptools'],
     zip_safe=True,
