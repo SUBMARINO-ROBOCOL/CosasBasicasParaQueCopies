@@ -1,1 +1,0 @@
-/home/sarten-imusa-420/Documents/GitHub/CosasBasicasParaQueCopies/ros2_camera_ws/src/cam_stream/setup.py
