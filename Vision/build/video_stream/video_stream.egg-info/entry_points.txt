@@ -1,0 +1,4 @@
+[console_scripts]
+service_caller = video_stream.service_caller:main
+video_publisher = video_stream.video_publisher:main
+

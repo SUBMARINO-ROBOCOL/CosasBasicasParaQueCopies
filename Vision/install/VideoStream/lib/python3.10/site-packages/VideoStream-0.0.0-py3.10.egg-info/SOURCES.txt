@@ -1,0 +1,15 @@
+package.xml
+setup.cfg
+setup.py
+../../build/VideoStream/VideoStream.egg-info/PKG-INFO
+../../build/VideoStream/VideoStream.egg-info/SOURCES.txt
+../../build/VideoStream/VideoStream.egg-info/dependency_links.txt
+../../build/VideoStream/VideoStream.egg-info/entry_points.txt
+../../build/VideoStream/VideoStream.egg-info/requires.txt
+../../build/VideoStream/VideoStream.egg-info/top_level.txt
+../../build/VideoStream/VideoStream.egg-info/zip-safe
+VideoStream/__init__.py
+resource/VideoStream
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py
